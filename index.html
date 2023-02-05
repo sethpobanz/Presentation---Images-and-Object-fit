@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    article {
+      max-width: 48em;
+      /* choose whatever width you'd like.
+                         "em" is one character */
+    }
+  </style>
+  <title>Images and Object-fit</title>
+</head>
+
+<body>
+  <main>
+    <article>
+      <h2>
+        What is Object-fit?
+      </h2>
+      <p>The object-fit property can take one of the following values:
+      <ul>
+
+        <li>fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be
+          stretched
+          or squished to fit</li>
+        <li>contain - The image keeps its aspect ratio, but is resized to fit within the given dimension</li>
+        <li>cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+        </li>
+        <li>none - The image is not resized</li>
+        <li>scale-down - the image is scaled down to the smallest version of none or contain</li>
+      </ul>
+      </p>
+      <h2>Original image</h2>
+
+      <p class="codepen" data-height="500" data-default-tab="result" data-slug-hash="mdjoqbJ" data-user="sethpobanz"
+        style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/mdjoqbJ">
+            Presentation-OG</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+      <h2>Object-fit: Cover</h2>
+      <p>The img will keep its aspect ratio but is cropped to the given dimensions</p>
+      <p class="codepen" data-height="390.37890625" data-default-tab="css,result" data-slug-hash="VwBRrmY"
+        data-user="sethpobanz"
+        style="height: 390.37890625px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/VwBRrmY">
+            Presentation-Cover</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+      <h2>Object-fit: Contain</h2>
+      <p>The image keeps its aspect ration but is resized to fit in the given dimensions</p>
+      <p class="codepen" data-height="305.859375" data-default-tab="css,result" data-slug-hash="PoBLOpb"
+        data-user="sethpobanz"
+        style="height: 305.859375px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/PoBLOpb">
+            Presentation-Contain</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+      <h2>Object-fit: Fill</h2>
+      <p>Object will be resized to the given dimensions but will not maintain aspect ratio</p>
+      <p class="codepen" data-height="389.19921875" data-default-tab="css,result" data-slug-hash="QWBoOva"
+        data-user="sethpobanz"
+        style="height: 389.19921875px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/QWBoOva">
+            Presentation-Fill</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+      <h2>Object-fit: none</h2>
+      <p>The object is not resized, but the image shown will be soley the cropped dimensions</p>
+      <p class="codepen" data-height="392.9921875" data-default-tab="css,result" data-slug-hash="KKBEyqo"
+        data-user="sethpobanz"
+        style="height: 392.9921875px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/KKBEyqo">
+            Presentation-none</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+      <h2>Object-fit: Scale-down</h2>
+      <p> the image will compare the difference between none and contain in order to find the smallest concrete object
+        size.</p>
+      <p class="codepen" data-height="303.12109375" data-default-tab="css,result" data-slug-hash="WNKmXdd"
+        data-user="sethpobanz"
+        style="height: 303.12109375px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/sethpobanz/pen/WNKmXdd">
+            Presentation-Scaledown</a> by sethpobanz (<a href="https://codepen.io/sethpobanz">@sethpobanz</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </article>
+  </main>
+</body>
+
+</html>
